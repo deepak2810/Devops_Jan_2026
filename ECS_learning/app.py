@@ -5,7 +5,7 @@ import os
 app = Flask(__name__)
 
 # Connect to Redis using the hostname 'redis' (we will define this later in AWS)
-r = redis.Redis(host='redis-service', port=6379, decode_responses=True)
+r = redis.Redis(host='redis-service.local', port=6379, decode_responses=True)
 
 @app.route('/')
 def hello():
